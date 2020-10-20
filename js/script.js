@@ -1,5 +1,5 @@
 $(function() {
     $('.like-button').click(function(){
-        $(this).addClass("liked");
+        $(this).toggleClass("liked");
     });
 })
