@@ -1,18 +1,3 @@
-
-class Author{
-    constructor(firstname,lastname,avatar){
-        this.firstname=firstname;
-        this.lastname=lastname;
-        this.avatar=avatar;
-    }
-}
-
-class media{
-    constructor(type,url){
-    this.type=type;
-    this.url=url;
-    }
-}
 class UserPost{
 
     constructor(id, author, createTime, text, media, likes){
@@ -21,7 +6,7 @@ class UserPost{
         this.createTime=createTime;
         this.text=text
         this.media=media;
-        this.likes=likes;
+        this.likes=likes+"k";
     }
 
     isPostWithMedia() {
@@ -36,7 +21,7 @@ class UserPost{
         let header= '<div class="post">' +
         '<div class="post-author">' +
           '<span class="post-author-info">'+
-            '<img src="'+ this.author.avatar + '" alt="Post author">'+
+            '<img src="'+ this.author.avatar + 'alt="Post author">'+
             '<small>'+this.author.firstname + ' ' + this.author.lastname +'</small>'+
           '</span>'+
           '<small>'+ this.createTime+'</small>'+
@@ -70,45 +55,22 @@ class UserPost{
     }
 
 
-toString(){
-    return this.likes;
-    
-    
-    
-}
+
 
 
 }
 
+class Author{
+    constructor(firstname,lastname,avatar){
+        this.firstname=firstname;
+        this.lastname=lastname;
+        this.avatar=avatar;
+    }
+}
 
-
-
-$(function() {
-    //Like button
-    $('.like-button').click(function(){
-        $(this).toggleClass("liked");
-    });
-
-    //Json query
-    $.get( "https://private-anon-05dd88cf9f-wad20postit.apiary-mock.com/posts", function( data ) {
-        $( ".result" ).html( data );
-        $.each(data, function( index, value ) {
-
-            let postAuthor = new Author(value.author.firstname,value.author.lastname,value.author.avatar);
-            let postMedia;
-            if(value.media ==null){
-                postMedia=null;
-            }else{
-                postMedia=value.media;
-            }
-            
-            let pst = new UserPost(value.id,postAuthor,value.createTime,value.text,postMedia,value.likes);
-            if(value.id==1){
-                $(".main-container").append(pst.postContent())
-                alert(pst.toString())
-            }
-            
-          });
-        });
-        
-})
+class media{
+    constructor(type,url){
+    this.type=type;
+    this.url=url;
+    }
+}
