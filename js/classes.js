@@ -6,6 +6,20 @@ class Author{
     }
 }
 
+class User{
+    constructor(firstname,lastname,email,avatar){
+        this.firstname=firstname;
+        this.lastname=lastname;
+        this.email=email;
+        this.avatar=avatar;
+    }
+
+    userInfo(){
+        return "<span>" + this.firstname + " " + this.lastname
+        + "<br>" + this.email + "</span><hr>";
+    }
+}
+
 class media{
     constructor(type,url){
     this.type=type;

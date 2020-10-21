@@ -113,6 +113,20 @@ nav div.avatar-container {
     text-align: right;
 }
 
+.dropdown-menu{
+    float: right;
+    box-sizing: border-box;
+    margin-right: 0px;
+    margin-top: 50px;
+    display: none;
+    text-align: left;
+    background-color: #ffffff;
+    padding: 10px;
+    width: 15%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+}
+
 .main-container {
     width: 50%;
     min-height: 100%;

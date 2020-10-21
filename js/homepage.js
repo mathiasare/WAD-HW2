@@ -23,10 +23,44 @@ $(function() {
           });
           
         });
-   
     
-        
+    loadUserInfo()
+        .then(function (response) {
+            user = new User(
+                response.firstname,
+                response.lastname,
+                response.email,
+                response.avatar
+            );
+            $('.dropdown-menu').prepend(user.userInfo())
+            $('.avatar').attr('src', user.avatar);
+        })
+        .catch(function () {
+            alert('Error loading user information')
+        });
+
+    $('.avatar').click(function(){
+        if($('.dropdown-menu').is(":hidden")){
+            $('.dropdown-menu').show();
+        }
+        else{
+            $('.dropdown-menu').hide();
+        }
+    })  
 })
 
+function loadUserInfo() {
+    return $.get(
+        {
+            url: 'https://private-anon-ba0e9b1a8c-wad20postit.apiary-mock.com/users/1',
+            success: function (response) {
+                return response;
+            },
+            error: function () {
+                alert('Error loading user information')
+            }
+        }
+    );
+}
 //<button type="button" name="like" class="like-button">25k</button>
 //<button type="button" name="like" class="like-button">10k</button>
