@@ -91,17 +91,39 @@ class UserPost{
        }
 
        return header+postBody;
-       
-       
+
     }
-
-
 toString(){
     return this.likes;
-    
-    
-    
+
+}
 }
 
+class UserProfile{
 
+    constructor(author){
+        this.author = author;
+    }
+
+    ProfileContent(){
+        let header= '<div class="profile">' +
+            '<div class="profile-author">' +
+            '<span class="profile-author-info">'+
+            '<img src="'+ this.author.avatar + '" alt="Profile avatar">'+
+            '<small>'+this.author.firstname + ' ' + this.author.lastname +'</small>'+
+            '</span>'+
+            '</div>';
+
+        let profileBody= "";
+        profileBody='<div class="profile-title">'+
+            '</div>'+
+            '<div class="profile-actions">'+
+            '<button id="follow" type="button" name="follow" class="follow-button">'+"Follow"+'</button>'+
+            '</div>'+
+            '</div>';
+
+        return header+profileBody;
+
+
+    }
 }

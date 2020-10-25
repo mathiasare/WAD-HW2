@@ -216,3 +216,74 @@ nav div.avatar-container {
 .like-button.liked {
     background-color: #01579b;
 }
+
+.follow-button {
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-color: #8b2fa1;
+    width: auto;
+    height: 25px;
+    line-height: 10px;
+    text-align: center;
+    border: none;
+}
+.follow-button.followed {
+    line-height: 8px;
+    background-color: white;
+    border: 2px solid #8b2fa1;
+    color: #8b2fa1;
+
+}
+
+.profile {
+    width: 40%;
+    margin: 15px auto;
+    box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
+    border-radius: 5px;
+}
+
+.profile .profile-author {
+    padding: 10px;
+}
+
+.profile .profile-author::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.profile .profile-author .profile-author-info {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.profile .profile-author .profile-author-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: top;
+    margin: 5px;
+}
+
+.profile .profile-author .profile-author-info small {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+}
+
+.profile .profile-author .profile-author-info + small {
+    float: right;
+    color: grey;
+    padding: 10px;
+}
+
+.profile .profile-title {
+    padding: 10px;
+}
+
+.profile .profile-title ~ .profile-actions {
+    padding: 10px;
+}
