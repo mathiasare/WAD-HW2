@@ -106,23 +106,16 @@ class UserProfile{
     }
 
     ProfileContent(){
-        let header= '<div class="profile">' +
-            '<div class="profile-author">' +
-            '<span class="profile-author-info">'+
+        let profile= '<div class="profile">' +
+            '<div class="profile-avatar">' +
             '<img src="'+ this.author.avatar + '" alt="Profile avatar">'+
-            '<small>'+this.author.firstname + ' ' + this.author.lastname +'</small>'+
-            '</span>'+
+            '<span>'+this.author.firstname + ' ' + this.author.lastname +'</span>'+
+            '</div>' + '<div class="profile-actions">' +
+            '<button type="button" class="follow-button">'+"Follow"+'</button>'+
             '</div>';
 
-        let profileBody= "";
-        profileBody='<div class="profile-title">'+
-            '</div>'+
-            '<div class="profile-actions">'+
-            '<button id="follow" type="button" name="follow" class="follow-button">'+"Follow"+'</button>'+
-            '</div>'+
-            '</div>';
 
-        return header+profileBody;
+        return profile;
 
 
     }

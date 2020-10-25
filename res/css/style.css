@@ -237,29 +237,25 @@ nav div.avatar-container {
 }
 
 .profile {
-    width: 40%;
-    margin: 15px auto;
-    box-shadow: 0 0 15px rgba(38, 50, 56, 0.33);
-    border-radius: 5px;
-}
-
-.profile .profile-author {
-    padding: 10px;
-}
-
-.profile .profile-author::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.profile .profile-author .profile-author-info {
     float: left;
-    position: relative;
-    width: 100%;
+    width: 270px;
+    border: 1px solid rgb(228, 221, 221);
+    height: 180px;
+    margin: 10px;
+    text-align: center;
+    font-weight: 700;
 }
 
-.profile .profile-author .profile-author-info img {
+.profile-avatar {
+    padding: 5px;
+    border-radius: 50%;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-avatar img{
     width: 60px;
     height: 60px;
     border-radius: 100%;
@@ -267,23 +263,6 @@ nav div.avatar-container {
     object-position: top;
     margin: 5px;
 }
-
-.profile .profile-author .profile-author-info small {
-    position: absolute;
-    top: 100px;
-    left: 80px;
-}
-
-.profile .profile-author .profile-author-info + small {
-    float: right;
-    color: grey;
-    padding: 10px;
-}
-
-.profile .profile-title {
-    padding: 10px;
-}
-
-.profile .profile-title ~ .profile-actions {
+.profile .profile-actions {
     padding: 10px;
 }
