@@ -7,7 +7,7 @@ $(function() {
 
             let profile = new UserProfile(new Author(value.firstname,value.lastname,value.avatar));
 
-            $(".main-container").append(profile.ProfileContent());
+            $(".profile-container").append(profile.ProfileContent());
 
         });
         $('.follow-button').on('click',function(){

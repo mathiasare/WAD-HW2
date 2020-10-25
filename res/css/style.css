@@ -266,3 +266,9 @@ nav div.avatar-container {
 .profile .profile-actions {
     padding: 10px;
 }
+.profile-container{
+    width: auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
